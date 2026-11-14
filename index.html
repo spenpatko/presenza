@@ -216,7 +216,7 @@
             </div>
 
             <button type="submit" id="btn-login-submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-600/25 transition flex items-center justify-center gap-2 cursor-pointer">
-              <span>Masuk ke Sistem</span>
+              <span>Masuk</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
           </form>
@@ -1607,7 +1607,7 @@
           sessionPill.textContent = "Sesi Aktif: Presensi Pulang";
           sessionPill.className = "px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-2";
         } else {
-          sessionPill.textContent = "Sesi Aktif: Presensi Masuk";
+          sessionPill.textContent = "Sesi Aktif: Presensi Masuk/Pulang";
           sessionPill.className = "px-3.5 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-wider mb-2";
         }
       }
@@ -1745,7 +1745,7 @@
       const toleransi = parseInt(appState.settings.toleransi_terlambat || "15", 10);
       const batasMasukMin = masukH * 60 + masukM + toleransi;
 
-      const [pulangH, pulangM] = (appState.settings.jam_pulang || "13:00").split(':').map(Number);
+      const [pulangH, pulangM] = (appState.settings.jam_pulang || "11:00").split(':').map(Number);
       const jamPulangMin = pulangH * 60 + pulangM;
 
       let existingToday = appState.presensi.find(p => p.tanggal === TODAY_STR && p.idSiswa === student.id);
