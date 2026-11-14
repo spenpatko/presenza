@@ -956,7 +956,7 @@
                 </div>
 
                 <button type="button" onclick="handleSaveSettings()" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md transition cursor-pointer">
-                  Simpan Pengaturan Sekolah
+                  Simpan Pengaturan
                 </button>
               </div>
 
@@ -964,8 +964,8 @@
               <div class="lg:col-span-6 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-4">
                 <div class="flex items-center justify-between">
                   <div>
-                    <h3 class="font-display font-bold text-base text-slate-900">Manajemen Akun Petugas</h3>
-                    <p class="text-xs text-slate-500">Kelola akses Admin & Guru Piket</p>
+                    <h3 class="font-display font-bold text-base text-slate-900">Manajemen Akun</h3>
+                    <p class="text-xs text-slate-500">Kelola Akses</p>
                   </div>
                   <button onclick="openUserModal()" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center gap-1.5 cursor-pointer">
                     <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
@@ -974,7 +974,7 @@
                 </div>
 
                 <div id="users-list-container" class="space-y-2.5">
-                  <!-- Daftar user -->
+                  <!-- Daftar User -->
                 </div>
               </div>
             </div>
@@ -1002,7 +1002,7 @@
           <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-200">
             <label class="block text-xs font-bold text-blue-900 mb-1.5 flex items-center justify-between">
               <span>UID Kartu RFID (10 Digit) *</span>
-              <span class="text-[11px] font-medium text-blue-600">Klik kolom lalu tempelkan kartu ke mesin</span>
+              <span class="text-[11px] font-medium text-blue-600">Klik kolom lalu tempelkan kartu RFID</span>
             </label>
             <div class="flex gap-2">
               <input type="text" id="siswa-uid" required placeholder="Tempelkan kartu RFID..." class="flex-1 px-3.5 py-2.5 rounded-xl bg-white border border-blue-300 focus:border-blue-600 font-mono text-sm font-bold text-slate-900 outline-none" />
@@ -1044,7 +1044,7 @@
             </div>
             <div>
               <label class="block text-xs font-semibold text-slate-600 mb-1">Kelas *</label>
-              <input type="text" id="siswa-kelas" required placeholder="Contoh: XII IPA 1" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm outline-none focus:border-blue-600" />
+              <input type="text" id="siswa-kelas" required placeholder="Contoh: VII" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm outline-none focus:border-blue-600" />
             </div>
           </div>
 
@@ -1532,7 +1532,7 @@
     function openKioskPrompt() {
       openConfirmModal({
         title: "Akses Terminal Kiosk RFID",
-        desc: `Masukkan PIN Kiosk (Default: ${appState.settings.pin_kiosk}) untuk mengunci layar sebagai mesin tap kartu siswa.`,
+        desc: `Masukkan PIN Kiosk untuk mengunci layar sebagai mesin tap kartu siswa.`,
         showInput: true,
         confirmText: "Buka Kiosk",
         onConfirm: (pinVal) => {
